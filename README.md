@@ -1,6 +1,5 @@
 # profile-andreas-be
 
-# Deploy Sprint Boot And Postegres on Render with Web Services and Docker
 
 ## Create Spring Boot Project
 
