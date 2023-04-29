@@ -15,7 +15,7 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
-    @CrossOrigin(origins = "https://profile-andreas-be.onrender.com/")
+    @CrossOrigin(origins = "https://profile-andreas-be.onrender.com")
     @GetMapping("/rated")
     public MovieResponse getRatedMovies(){
         return movieService.getRatedMovies();
