@@ -4,6 +4,7 @@ import com.jansen.profile.common.movie.MovieResponse;
 import com.jansen.profile.dto.Movie;
 import com.jansen.profile.dto.tmdb.MovieTmdbResponse;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,6 +14,7 @@ public class MovieService {
     @Autowired
     public RestTemplate restTemplate;
 
+    @Cacheable("ratedMovies")
     public MovieResponse getRatedMovies(){
         MovieResponse movieResponse = new MovieResponse();
         try{
@@ -23,7 +25,7 @@ public class MovieService {
             movieResponse.setTotal_pages(movie.getTotal_pages());
             movieResponse.setTotal_results(movie.getTotal_results());
 
-            System.out.println("log_movie : "+ movieResponse);
+            System.out.println("log_movie : "+ movie.getTotal_pages());
 
             movieResponse.setSuccess(true);
         } catch (Exception e){
