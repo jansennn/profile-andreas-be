@@ -14,7 +14,7 @@
 	<name>profile</name>
 	<description>Profile Website</description>
 	<properties>
-		<java.version>11</java.version>
+		<java.version>8</java.version>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -49,6 +49,7 @@
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
 		</plugins>
+		<finalName>profile-andreas</finalName>
 	</build>
 
 </project>
